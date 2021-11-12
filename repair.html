@@ -1,0 +1,264 @@
+<html>
+<head>
+<title>Maytech</title>
+    <link rel="icon" href="icon m.png">
+    <link rel="stylesheet" href="main.css">
+	<link rel="stylesheet" href="responsive.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    body, html {
+    height: 100%;
+	padding: 0px;
+	margin: 0px;
+    background-color: #F6F6F6;
+	font-family: "lora", sans-serif, arial, segoe UI, ;
+	color: #FFFFFF;
+	}
+	
+	.btn {
+	display: inline-block;
+	background-color: #1010AB;    /*background-color: #4CAF50; , #5151ED*/
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-decoration: none;
+	font-size: 16px;
+	border-radius: 9px;
+	margin-bottom: 20px;
+	}
+	
+	.btn-big {                             
+	padding: .7rem 1.3rem;
+	line-height: 1.3rem;
+	background-color: #111111;
+	border: 1px solid white;
+	}
+	
+	.btn-big:hover {                             
+	border: 1px solid #33383b;
+	transition: all .3s;
+	cursor: pointer;
+	}
+	
+	a {
+	text-decoration: none;
+	color: #ccc;
+	}
+	
+	a:hover {
+	color: #fff;
+	}
+	
+	.contact-btn {
+	//float: right;
+	}
+	
+	.contact span {
+		display: block;
+		font-size: 1.1em;
+		margin-bottom: 8px;
+		color: #FFF;
+	}
+
+	.socials a {
+		border: 1px solid grey;
+		width: 44px;
+		height: 35px;
+		padding-top: 5px;
+		margin-right: 5px;
+		text-align: center;
+		display: inline-block;
+		font-size: 1.5em;
+		border-radius: 5px;
+		transition: all .3s;
+	}
+
+	#facebook:hover {
+		background-color: blue;
+	}
+
+	#twitter:hover {
+		background-color: #00ACEE;
+	}
+
+	#linkedin:hover {
+		background-color: cyan;
+	}
+
+	#instagram:hover {
+		background-color: red;
+	}
+
+	.about .socials a:hover {
+		border: 1px solid white;
+		color: white;
+		transition: all .3s;
+	}
+
+	h1,
+	h2 {
+		color: #FFF;
+	}
+
+	.links ul a {
+		display: block;
+		margin-bottom: 10px;
+		font-size: 1.2em;
+	}
+
+	.links ul a:hover {
+		color: white;
+		margin-left: 15px;
+		transition: all .3s;
+	}
+
+	.contact-input {
+		background: #272727;
+		color: #bebdbd;
+		margin-bottom: 10px;
+		line-height: 1.5rem;
+		padding: .9rem 1.5rem;
+		width: 60%;
+		border: none;
+	}
+
+	.contact-input:focus {
+		background-color: #000000;
+	}
+
+	.body-content {
+		background-image: url(img/back3.png);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+	}
+
+	#search input[type=text] {
+    padding: 10px 12px;
+    font-family: arial;
+    border: 1px solid orange;
+    border-radius: 5px;
+    background-color: white;
+    background-image: url('img/search2.jpeg');
+    background-size: 35px;
+    background-repeat: no-repeat;
+    background-position: 5px;
+    padding-left: 38px;
+	}
+	
+	#search {
+	text-align: right;
+	padding-right: 30px;
+	padding-top: -100px;
+	}
+
+	
+	#welcome {
+	font-size: 50px;
+	font-family: impact;
+	text-align: center;
+	color: #FFF;
+	padding-top: 200px;
+	}
+</style>
+	<script>
+	function showResult(str) {
+	  if (str.length==0) {
+		document.getElementById("livesearch").innerHTML="";
+		document.getElementById("livesearch").style.border="0px";
+		return;
+	  }
+	  var xmlhttp=new XMLHttpRequest();
+	  xmlhttp.onreadystatechange=function() {
+		if (this.readyState==4 && this.status==200) {
+		  document.getElementById("livesearch").innerHTML=this.responseText;
+		  document.getElementById("livesearch").style.border="1px solid #A5ACB2";
+		}
+	  }
+	  xmlhttp.open("GET","livesearch.php?q="+str,true);
+	  xmlhttp.send();
+	}
+	</script>
+</head>
+<body>
+<header>
+	<div class="body-content">
+		<img src="maytech r.png" style="float: left; width: 200px; padding: 15px;" /><br />
+		  <!--- <div id="search">
+				<input type="text" size="24" placeholder="Search.." />
+		   </div>--->
+		   <form id="search">
+			<input type="text" size="24" placeholder="Search.." onkeyup="showResult(this.value)" />
+			<!---<div id="livesearch"></div>--->
+		</form>
+	   <p id="welcome">
+			<b>Repair and Installation.</b>
+			<center>
+			<ul>
+				<li>Quick malfunction solution: system installation, hardware replacement, software updates, troubleshoot and general scanning</li>
+			</ul>
+			</center>
+	   </p>
+	   <br />
+	</div>
+</header>
+<footer class="footer">
+	<ul class="r-footer">
+	<li>
+		<h2>Quick links</h2>
+			<ul>
+				<a href="#"><li id="links">Repair and Installation</li></a>
+				<a href="#"><li id="links">Internet Installation</li></a>
+				<a href="#"><li id="links">Consultancy</li></a>
+				<a href="#"><li id="links">Antivirus</li></a>
+				<a href="#"><li id="links">MIS</li></a>
+				<a href="#"><li id="links">Graphic Aided Designs</li></a>
+				<a href="#"><li id="links">Software Development</li></a>
+				<a href="#"><li id="links">Print</li></a>
+				<a href="#"><li id="links">Internship</li></a>
+				<a href="#"><li id="links">System maintenance</li></a>
+				<a href="#"><li id="links">Training and Certification</li></a>
+			</ul>
+	</li>
+	<div class="l-footer">
+		<h1>
+		<span>maytech</span></h1>
+		<p>
+		Maytech is an incorporation of professional consultants of ICT services in Uganda. We deal in ICT based-technology to ease business and development of government, 
+		corporations and institutions through leveraging the advantage that IT offers in the modern century.
+		</p>
+		<div class="contact">
+			<span><i class="fa fa-phone"></i> &nbsp;Tel/Fax: +256(0) 41 891 0021</span>
+			<span><i class="fa fa-envelope"></i> &nbsp;Email: service@maytech.co.ug</span>
+		</div><br />
+		<div class="socials">
+			<a id="facebook" href="http://www.facebook.com/maytechonline"><i class="fa fa-facebook"></i></a>
+			<a id="twitter" href="#"><i class="fa fa-twitter"></i></a>
+			<a id="instagram" href="#"><i class="fa fa-instagram"></i></a>
+			<a id="linkedin" href="http://www.linkedin.com/company/maytechonline"><i class="fa fa-linkedin"></i></a>
+		</div>
+	</div>
+
+	<li class="features">
+	<h2>Contact us</h2>
+		<br />
+		<form action="message.php" method="post">
+			<input type="email" name="email" class="text-input contact-input" placeholder="Your email address..." required><br />
+			<textarea name="message" class="text-input contact-input" rows="4" placeholder="Your message..." required></textarea>
+			<br />
+			<button type="submit" class="btn btn-big contact-btn">
+			<i class="fa fa-envelope"></i>
+			Send
+			</button>
+		</form>
+	</li>
+	</ul>
+	<br />
+	<br />
+	<div class="b-footer">
+	<p>&copy 2020 Maytech Inc. Maytech is a registered trademark of Maytech Consultancy Incorporation.
+		</p>
+	</div>
+</footer>
+</body>
+</html>

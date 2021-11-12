@@ -1,0 +1,103 @@
+/**, *:before, *:after {
+box-sizing: border-box;
+}*/
+
+/*
+.footer {
+display: flex;
+flex-flow: row wrap;
+padding: 40px;
+color: #CCC;
+}*/
+
+.footer > * {
+flex:  1 100%;
+}
+
+.l-footer {
+margin-right: 1.25em;
+margin-bottom: 2em;
+}
+
+.footer ul {
+list-style: none;
+padding-left: 0;
+}
+
+.footer li {
+line-height: 2em;
+}
+
+.footer a {
+text-decoration: none;
+}
+
+.r-footer {
+display: flex;
+flex-flow: row wrap;
+}
+
+/*font-size: 1.2em;*/
+
+.r-footer > * {
+flex: 1 50%;
+margin-right: 1.25em;
+}
+
+.box a {
+color: #999;
+}
+
+.h-box {
+column-count: 2;
+column-gap: 1.25em;
+}
+
+.b-footer {
+text-align: center;
+color: #FFF;
+padding-top: 50px;
+}
+
+/*OTHER: text-align: center;
+color: #FFF;
+bottom: 0px;
+left: 0;
+background-color: #272727;
+width: 100%;
+position: absolute;-----------------------------*/
+
+ 
+/*                             OR
+	text-align: center;
+	height: 40px;
+	width: 100%;
+	position: absolute;
+	background-color: #272727;
+	bottom: 0px;
+	left: 0;
+	padding-top: 30px;
+*/
+
+.l-footer p {
+padding-right: 20%;
+//color: #999;
+}   
+
+@media screen and (min-width: 720px) {
+.r-footer > * {
+flex: 1;
+}
+
+.features {
+flex-grow: 2;
+}
+
+.l-footer {
+flex: 1 0px;
+}
+
+.r-footer {
+flex: 2 0px;
+}
+}
